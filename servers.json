@@ -1,0 +1,22 @@
+{
+  "Servers": {
+    "WQA": {
+      "Name": "WQA",
+      "Group": "Servers",
+      "Host": "host.docker.internal",
+      "Port": 5433,
+      "MaintenanceDB": "postgres",
+      "Username": "admin",
+      "SSLMode": "prefer"
+    },
+    "TEST": {
+      "Name": "TEST",
+      "Group": "Servers",
+      "Host": "host.docker.internal",
+      "Port": 5434,
+      "MaintenanceDB": "postgres",
+      "Username": "fastapi_user",
+      "SSLMode": "prefer"
+    }
+  }
+}

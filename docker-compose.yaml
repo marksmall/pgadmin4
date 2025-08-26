@@ -1,0 +1,17 @@
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: mark@example.com
+      PGADMIN_DEFAULT_PASSWORD: supersecret
+    ports:
+      - '8080:80'
+    volumes:
+      - ./servers.json:/pgadmin4/servers.json
+      - pgadmin-data:/var/lib/pgadmin
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  pgadmin-data:
